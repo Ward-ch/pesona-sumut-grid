@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.navbar {
+  background-color: antiquewhite;
+  padding: 25px 30px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu li a:hover {
+  color: darkorange;
+}
+
+.grid-layout {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "content fasilitas"
+    "content event";
+  gap: 20px;
+}
+
+.content {
+  grid-area: content;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card:nth-of-type(1) {
+  grid-area: fasilitas;
+}
+
+.card:nth-of-type(2) {
+  grid-area: event;
+}
+
+h2, h3, h4 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.hero-img,
+.content-img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+figcaption {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.media {
+  width: 100%;
+  margin: 15px 0;
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+
+.card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.card a:hover {
+  color: darkorange;
+}
+
+footer {
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "fasilitas"
+      "event";
+  }
+}
